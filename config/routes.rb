@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  get 'new/StaticPages'
+get 'static_pages/contact'
 
-  get 'new/home'
-
-  get 'new/help'
-
-  get 'new/about'
-
+  get 'static_pages/about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "application#testmayne"
+  root "static_pages#home"
 end
+
