@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get  '/gettingstarted',    to: 'static_pages#GettingStarted'
   get  '/faq',   to: 'static_pages#faq'
   get   '/join', to: 'users#new'
+  post '/join',  to: 'users#create'
   resources :users
 end
 
