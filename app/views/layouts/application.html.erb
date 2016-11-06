@@ -2,13 +2,32 @@
 <html>
   <head>
     <title><%= yield(:title) %> | @RooM8p</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+	<body>
+  		<nav>
+  			<div class="container">
+    			<div class="twelve columns">
+          			<ul class="nav-load">
+            			<li class="site-name"><%= link_to "RooM8", root_path, id: "logo"%></li>
+            			<li class="hidden-mobile"><%= link_to "Contact",   contact_path %></li>
+            			<li class="hidden-mobile"><%= link_to "About",   about_path %></li>
+            			<li class="hidden-mobile"><%= link_to "Getting Started",   gettingstarted_path %></li>
+            			<li class="hidden-mobile"><%= link_to "FAQ",   faq_path %></li>
+            			<li><%= link_to "Log in", '#' %></li>
+          			</ul>
+        		</div>
+      		</div>
+    	</nav>
+
+<%= yield %>
+	<!-- <%= render 'layouts/footer' %> -->
+</div>
+</body>
 </html>
